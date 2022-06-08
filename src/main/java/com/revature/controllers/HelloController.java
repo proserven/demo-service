@@ -19,4 +19,9 @@ public class HelloController {
 	public String sayHello() throws UnknownHostException {
 		return String.format("Hello from %s:%s", InetAddress.getLocalHost().getHostAddress(), env.getProperty("local.server.port"));
 	}
+
+	@GetMapping("/hi")
+	public String sayHi() throws UnknownHostException {
+		return String.format("Hello Luis looks for the info:  %s:%s", InetAddress.getLocalHost().getHostAddress(), env.getProperty("local.server.port"));
+	}
 }
